@@ -8,6 +8,15 @@ The application began as a collaborative university software development project
 
 This repository serves as a portfolio case study documenting the project, my technical contributions, and the development and testing experience gained throughout the project.
 
+## Technical Snapshot
+
+**Frontend:** React.js, JavaScript, HTML, CSS  
+**Backend & APIs:** JavaScript, REST APIs  
+**Database:** MongoDB  
+**Authentication:** Firebase Authentication  
+**Testing & QA:** Postman, functional testing, frontend testing, API testing  
+**Development Tools:** Git, GitHub, Jira  
+
 ---
 
 ## Key Features
@@ -148,6 +157,18 @@ My work on the project provided hands-on experience across multiple stages of th
 - Debugging
 - Technical documentation
 - Team-based software development
+
+---
+
+## Project Documentation
+
+Explore the supporting documentation for additional detail on development, testing, quality assurance, and project progression.
+
+- [Testing & Quality Assurance](documentation/testing-and-qa.md)
+- [Bug & Improvement Report](documentation/bug-and-improvement-report.md)
+- [Sprint Development & Project Progress](documentation/sprint-development.md)
+- [Project Evidence](documentation/project-evidence.md)
+- [Documentation Overview](documentation/README.md)
 
 ---
 
