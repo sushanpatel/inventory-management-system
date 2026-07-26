@@ -65,6 +65,54 @@ This provided a structured approach to evaluating the application rather than re
 
 ---
 
+## Selected Test Results
+
+The following are selected test cases from the final project testing documentation. These tests covered authentication, inventory management, staff management, warehouse functionality, and order workflows.
+
+| Module | Test Scenario | Expected Result | Result |
+|---|---|---|---|
+| Registration | Valid email format and 8-character password | Registration successful | Pass |
+| Registration | Empty email and password | Field validation displayed | Pass |
+| Registration | Invalid email format and short password | Field validation displayed | Pass |
+| Registration | Already registered email | Existing-email validation message displayed | Pass |
+| Registration | Disposable email address | Disposable-email validation message displayed | Fail |
+| Login | Valid email and password | Login successful | Pass |
+| Login | Empty email and password | Field validation displayed | Pass |
+| Login | Invalid email format and short password | Field validation displayed | Pass |
+| Login | Email that does not exist | Error message displayed | Pass |
+| Inventory | Add inventory with all required fields | Inventory added | Pass |
+| Inventory | Add inventory with missing fields | Missing-field validation displayed | Pass |
+| Inventory | Add positive quantity | Quantity added | Pass |
+| Inventory | Add negative quantity | Validation message displayed | Fail — error page |
+| Inventory | Remove positive quantity | Quantity removed | Pass |
+| Inventory | Remove negative quantity | Validation message displayed | Fail — error page |
+| Staff | Add staff with all required fields | Staff added | Pass |
+| Staff | Add staff with missing fields | Missing-field validation displayed | Fail |
+| Staff | Edit staff fields | Fields edited successfully | Pass |
+| Staff | Delete staff | Staff deleted | Pass |
+| Warehouse | Add warehouse with all required fields | Warehouse added | Pass |
+| Warehouse | Edit warehouse fields | Warehouse edited | Pass |
+| Warehouse | Link warehouse with product | Linking successful | Pass |
+| Warehouse | Delete warehouse | Warehouse deleted | Pass |
+| Warehouse | Delete warehouse containing linked products | Warehouse should not be deleted | Fail — warehouse was deleted |
+| Order | Select order type | Order type selected | Pass |
+| Order | Create order with required details | Order created | Pass |
+| Order | Complete sale order | Product quantity decreases | Pass |
+| Order | Complete purchase order | Product quantity increases | Pass |
+
+### Findings
+
+Testing confirmed that many of the application's primary workflows operated successfully while also identifying several validation and data-integrity issues.
+
+Notable issues identified included:
+
+- Disposable email addresses were not properly rejected during registration.
+- Negative inventory quantity operations resulted in error pages rather than validation messages.
+- Staff creation with missing required fields did not provide the expected validation.
+- A warehouse containing linked products could be deleted when the expected behavior was to prevent deletion.
+
+These failed test cases provided actionable areas for debugging and application improvement.
+
 ## Bug Identification & Reporting
 
 During testing, I identified bugs and areas where the application could be improved.
